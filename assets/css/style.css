@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "Garamond";
+  src: url("../fonts/EBGaramond08-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter UI";
+  src: url("../fonts/Inter-UI-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter UI";
+  src: url("../fonts/Inter-UI-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Inter UI";
+  src: url("../fonts/Inter-UI-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter UI";
+  src: url("../fonts/Inter-UI-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter UI";
+  src: url("../fonts/Inter-UI-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter UI";
+  src: url("../fonts/Inter-UI-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Inter UI";
+  src: url("../fonts/Inter-UI-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Inter UI";
+  src: url("../fonts/Inter-UI-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+
+* {
+	box-sizing: border-box;
+}
+html {
+  font-family: 'Inter UI';
+  background: black;
+}
+h1 {
+  font-size: 44px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 19px;
+  font-weight: 700;
+}
+p {
+  font-size: 16px;
+  margin: 16px 0;
+  line-height: 24px;
+}
+p.desc {
+  color: #666;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.App {
+}
+.App-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 64px 16px;
+  flex-direction: column;
+}
+
+/* .Send {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+} */
+.Send-method {
+  margin: 0 8px;
+}
+.Send-method-description {
+  color: #999;
+  padding: 16px 0 0 0;
+  text-align: center;
+  font-family: monospace;
+}
+.Send-methods {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+}
+
+pre {
+  max-width: 350px;
+  position: relative;
+  max-height: 180px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 4px;
+  font-family: monospace;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+  word-wrap: break-word;
+}
+pre.b64 {
+  white-space: normal;
+}
+pre::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, #fff, hsla(0,0%,100%,0) 60px);
+}
+
+.Header {
+  background: black;
+  color: white;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.Header-logo {
+  cursor: pointer;
+  position: fixed;
+  margin: 24px;
+  mix-blend-mode: difference;
+}
+.Header-subnav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 46px 0;
+}
+.Header-subnav a {
+  font-size: 13px;
+  font-family: 'Space Mono', monospace;
+  color: #999999;
+  transition: all .15s ease;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+  margin: 0 12px;
+}
+.Header-subnav a:hover {
+  color: white;
+  border-color: white;
+}
+.Header-intro {
+  margin: 0 auto;
+  padding: 64px 16px 64px 16px;
+  width: 100%;
+  text-align: center;
+}
+.Header-intro h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+.Header-mock {
+  position: relative;
+}
+.Header-app {
+  margin-top: 28px;
+  max-width: 650px;
+  box-shadow: 0 10px 30px rgba(50, 50, 50, 0.3);
+  border-radius: 4px;
+}
+.Header-app-logo {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: black;
+  stroke: black;
+}
+.Header-app-logo path {
+  fill: black;
+}
+.Header-description {
+  font-family: 'Garamond';
+  margin-top: 26px;
+}
+.Header-description h3 {
+  font-size: 26px;
+  font-weight: 400;
+}
