@@ -4,22 +4,19 @@ import { Spring } from 'react-spring/renderprops';
 import { useSpring, animated } from 'react-spring';
 
 import window from './assets/png/mac-window.png';
+import file from './assets/png/file.png';
 
 function Header() {
-  // const animateNav = useSpring({
-  //   from: { opacity: 0 },
-  //   to: { opacity: 1 },
-  // });
   const animateH1 = useSpring({
     from: { opacity: 0, transform: 'translateY(10px)' },
     to: { opacity: 1, transform: 'translateY(0)' },
     delay: 0,
   });
-  const animateHeader = useSpring({
-    from: { opacity: 0, transform: 'translateY(10px)' },
-    to: { opacity: 1, transform: 'translateY(0)' },
-    delay: 170,
-  });
+  // const animateHeader = useSpring({
+  //   from: { opacity: 0, transform: 'translateY(10px)' },
+  //   to: { opacity: 1, transform: 'translateY(0)' },
+  //   delay: 170,
+  // });
 
   return (
     <div className="Header">
@@ -70,28 +67,86 @@ function Header() {
 }
 
 function Send() {
+  const s = 'ewogICAgIm51bV9wYXJ0aWNpcGFudHMiOiAyLAogICAgImlkIjogIjhiOTc1OWI2LWQ3ZTEtNDg4Yi1iYjMzLTc2MTRjODQzZWY0ZSIsCiAgICAidHgiOiB7CiAgICAgICJvZmZzZXQiOiBbMTY1XSwKICAgICAgImJvZHkiOiB7CiAgICAgICAgImlucHV0cyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImZlYXR1cmVzIjogIlBsYWluIiwKICAgICAgICAgICAgImNvbW1pdCI6IFs5XQogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgImZlYXR1cmVzIjogIlBsYWluIiwKICAgICAgICAgICAgImNvbW1pdCI6IFs5XQogICAgICAgICAgfQogICAgICAgIF0sCiAgICAgICAgIm91dHB1dHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJmZWF0dXJlcyI6ICJQbGFpbiIsCiAgICAgICAgICAgICJjb21taXQiOiBbOF0sCiAgICAgICAgICAgICJwcm9vZiI6IFsyNDBdCiAgICAgICAgICB9CiAgICAgICAgXSwKICAgICAgICAia2VybmVscyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImZlYXR1cmVzIjogIkhlaWdodExvY2tlZCIsCiAgICAgICAgICAgICJmZWUiOiA3MDAwMDAwLAogICAgICAgICAgICAibG9ja19oZWlnaHQiOiAxMDU2MSwKICAgICAgICAgICAgImV4Y2VzcyI6IFswXSwKICAgICAgICAgICAgImV4Y2Vzc19zaWciOiBbMF0KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0sCiAgICAiYW1vdW50IjogMTAwMDAwMDAwMDAsCiAgICAiZmVlIjogNzAwMDAwMCwKICAgICJoZWlnaHQiOiAxMDU2MSwKICAgICJsb2NrX2hlaWdodCI6IDEwNTYxLAogICAgInBhcnRpY2lwYW50X2RhdGEiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiAwLAogICAgICAgICJwdWJsaWNfYmxpbmRfZXhjZXNzIjogWzEwNV0sCiAgICAgICAgInB1YmxpY19ub25jZSI6IFs2OV0sCiAgICAgICAgInBhcnRfc2lnIjogbnVsbCwKICAgICAgICAibWVzc2FnZSI6IG51bGwsCiAgICAgICAgIm1lc3NhZ2Vfc2lnIjogbnVsbAogICAgICB9CiAgICBdLAogICAgInZlcnNpb24iOiAxCiAgfQ';
+
   return (
     <div className="Send">
-      <h2>
-        Send Grin through your favorite chat app.
-      </h2>
-      <div className="Send-bubbles">
-        <div className="Send-left-bubble">
-          <div className="Send-grey-bubble">
-            Send me some Grin.
+      <h3>Send Grin through your favorite chat app.</h3>
+      <h4>Send by base58 string or by file.</h4>
+      <div className="Send-content">
+        <div className="Send-bubbles">
+          <div className="Send-left-bubble">
+            <div className="Send-grey-bubble">
+              Send me some Grin.
+            </div>
+          </div>
+          <div className="Send-right-bubble">
+            <div className="Send-blue-bubble">
+              Ok, receive this and send back the response.
+            </div>
+            <div className="Send-blue-bubble">
+              ewogICAgIm51bV9wYXJ0aWNpcGFudHMiOiAyLAogICAgImlkIjogIjhiOTc1OWI2LWQ3ZTEtNDg4Yi1izLTc2MTRjODQzZWY0ZSIsCiAgICAidHgiOiB7CiAgICAgICJvZmZzZXQiOiBbMTY1XSwKICAgICAgImJvZHkiOiB7CiAgICAgICAgImlucHV0cyI6IFsKICAgICAgICAgIHsKICAgICAgIC...
+            </div>
+          </div>
+          <div className="Send-left-bubble">
+            <div className="Send-grey-bubble">
+              Here you go.
+            </div>
+            <div className="Send-grey-bubble">
+              mZWF0dXJlcyI6ICJQbGFpbiIsCiAgICAgICAgICAgICJjb21taXQiOiBbOF0sCiAgICAgICAgICAgIcm9vZiI6IFsyNDBdCiAgICAgICAgICB9CiAgICAgICAgXSwKICAgICAgICAia2VybmVscyI6IFsKICAgICAgICAgIHhlaWdodExvY2tlZCIsCiAgICAgICJmZWUiOiA3MDAwMDAwLAogICAgICAgICAw...
+            </div>
           </div>
         </div>
-        <div className="Send-right-bubble">
-          <div className="Send-blue-bubble">
-            Ok, paste this.
-          </div>
+        <div className="Send-or">
+          <span>or</span>
         </div>
-        <div className="Send-right-bubble">
-          <div className="Send-blue-bubble">
-            ewogICAgIm51bV9wYXJ0aWNpcGFudHMiOiAyLAogICAgImlkIjogIjhiOTc1OWI2LWQ3ZTEtNDg4Yi1iYjMzLTc2MTRjODQzZWY0ZSIsCiAgICAidHgiOiB7CiAgICAgICJvZmZzZXQiOiBbMTY1XSwKICAgICAgImJvZHkiOiB7CiAgICAgICAgImlucHV0cyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImZlYXR1cmVzIjogIlBsYWluIiwKICAgICAgICAgICAgImNvbW1pdCI6IFs5XQogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgImZlYXR1cmVzIjogIlBsYWluIiwKICAgICAgICAgICAgImNvbW1pdCI6IFs5XQogICAgICAgICAgfQogICAgICAgIF0sCiAgICAgICAgIm91dHB1dHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJmZWF0dXJlcyI6ICJQbGFpbiIsCiAgICAgICAgICAgICJjb21taXQiOiBbOF0sCiAgICAgICAgICAgICJwcm9vZiI6IFsyNDBdCiAgICAgICAgICB9CiAgICAgICAgXSwKICAgICAgICAia2VybmVscyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImZlYXR1cmVzIjogIkhlaWdodExvY2tlZCIsCiAgICAgICAgICAgICJmZWUiOiA3MDAwMDAwLAogICAgICAgICAgICAibG9ja19oZWlnaHQiOiAxMDU2MSwKICAgICAgICAgICAgImV4Y2VzcyI6IFswXSwKICAgICAgICAgICAgImV4Y2Vzc19zaWciOiBbMF0KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0sCiAgICAiYW1vdW50IjogMTAwMDAwMDAwMDAsCiAgICAiZmVlIjogNzAwMDAwMCwKICAgICJoZWlnaHQiOiAxMDU2MSwKICAgICJsb2NrX2hlaWdodCI6IDEwNTYxLAogICAgInBhcnRpY2lwYW50X2RhdGEiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiAwLAogICAgICAgICJwdWJsaWNfYmxpbmRfZXhjZXNzIjogWzEwNV0sCiAgICAgICAgInB1YmxpY19ub25jZSI6IFs2OV0sCiAgICAgICAgInBhcnRfc2lnIjogbnVsbCwKICAgICAgICAibWVzc2FnZSI6IG51bGwsCiAgICAgICAgIm1lc3NhZ2Vfc2lnIjogbnVsbAogICAgICB9CiAgICBdLAogICAgInZlcnNpb24iOiAxCiAgfQ
+        <div className="Send-files">
+          <div className="file" style={{ left: '75%', top: '15%' }}>
+            <div className="file-wrap"><img className="file-img" src={file} /></div>
+            <label className="file-label">tx1.json</label>
+          </div>
+          <div className="file" style={{ left: '0%', top: '10%' }}>
+            <div className="file-wrap"><img className="file-img" src={file} /></div>
+            <label className="file-label">tx2.json</label>
+          </div>
+          <div className="file" style={{ left: '20%', bottom: '18%' }}>
+            <div className="file-wrap"><img className="file-img" src={file} /></div>
+            <label className="file-label">response1.json</label>
+          </div>
+          <div className="file" style={{ left: '55%', bottom: '8%' }}>
+            <div className="file-wrap"><img className="file-img" src={file} /></div>
+            <label className="file-label">response2.json</label>
+          </div>
+          <div className="file" style={{ left: '40%', top: '3%' }}>
+            <div className="file-wrap"><img className="file-img" src={file} /></div>
+            <label className="file-label">response4.json</label>
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function End() {
+  return (
+    <div className="End">
+      <h2>Get Wimble</h2>
+      <h3>Easy to use, and open source.</h3>
+      <div className="End-links">
+        <button className="End-link">
+          Windows
+        </button>
+        <button className="End-link">
+          macOS
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="Footer">
     </div>
   );
 }
@@ -159,6 +214,7 @@ function App() {
       <Header />
       <animated.div style={animateContent}>
         <Send />
+        <End />
       </animated.div>
     </div>
   );
