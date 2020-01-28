@@ -47,7 +47,7 @@ path {
 .application {
 	max-width: 380px;
 	padding-top: 24px;
-	margin-left: 104px
+	/* margin-left: 104px */
 }
 .subheading {
 	color: #888;
@@ -57,7 +57,7 @@ path {
 }
 
 .App {
-	height: 100%;
+	/* height: 100%; */
 	background: white;
 }
 .App_content {
@@ -94,8 +94,26 @@ path {
 	height: 100%;
 }
 
+@media (max-width: 960px) {
+
+}
+
 @media (max-width: 648px) {
+	.App_text {
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: auto;
+		margin-top: 0px;
+		margin-bottom: 32px;
+	}
 	.App_section-1 {
+		flex-direction: column;
+	}
+	.App_section-2 {
+		flex-direction: column;
+	}
+	.App_section-3 {
 		flex-direction: column;
 	}
 }

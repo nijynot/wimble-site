@@ -39,63 +39,60 @@ function App() {
     <div className="App">
       <Wimble />
       <section className="App_section-1">
-        <div className="App_content" style={{ display: 'flex' }}>
-          <img className="application" src={splash} />
-          <div className="App_text">
-            <h2>Wimble</h2>
-            <span className="subheading">Wallet reinvented for Grin.</span>
-            <p>
-              Grin does not have addresses built-in which makes transacting
-              more convoluted. Thus, Wimble takes a new approach by only
-              supporting file- and text (base64) based transactions coupled
-              together with an intuitive interface.
-            </p>
-            <p>
-              Send- and receive Grin by simply copy-pasting strings through your favourite messaging app.
-            </p>
-          </div>
+      <img className="application" src={splash} />
+        <div className="App_text">
+          <h2>Wimble</h2>
+          <span className="subheading">Wallet reinvented for Grin.</span>
+          <p>
+            Grin does not have addresses built-in which makes transacting
+            more convoluted. Thus, Wimble takes a new approach by only
+            supporting file- and text (base64) based transactions coupled
+            together with an intuitive interface.
+          </p>
+          <p>
+            Send- and receive Grin by simply copy-pasting strings through your favourite messaging app.
+          </p>
         </div>
+        {/*<div className="App_content" style={{ display: 'flex' }}></div>*/}
       </section>
       <section className="App_section-2">
-        <div className="App_content" style={{ display: 'flex' }}>
-          <div
-            style={{ position: 'relative' }}
-            onMouseEnter={() => setHidden(false)}
-            onMouseLeave={() => setHidden(true)}
-          >
-            <animated.img className="application" src={homeHidden} />
-            <animated.img  style={fadeIn} className="application" src={homeShow} />
-          </div>
-          <div className="App_text">
-            <h2>Hide your values</h2>
-            <span className="subheading">Blur and unblur by hovering/clicking.</span>
-            <p>
-              Wimble aims to be a rendition of how a Grin wallet should be.
-              Careful about privacy and transparent about what it's doing.
-            </p>
-            <p>
-              Similar to the Grin TUI, Wimble shows stats about the node that's running
-              inside the wallet.
-            </p>
-          </div>
+        <div
+          style={{ position: 'relative' }}
+          onMouseEnter={() => setHidden(false)}
+          onMouseLeave={() => setHidden(true)}
+        >
+          <animated.img className="application" src={homeHidden} />
+          <animated.img  style={fadeIn} className="application" src={homeShow} />
         </div>
+        <div className="App_text">
+          <h2>Hide your values</h2>
+          <span className="subheading">Blur and unblur by hovering/clicking.</span>
+          <p>
+            Wimble aims to be a rendition of how a Grin wallet should be.
+            Careful about privacy and transparent about what it's doing.
+          </p>
+          <p>
+            Similar to the Grin TUI, Wimble shows stats about the node that's running
+            inside the wallet.
+          </p>
+        </div>
+        {/*<div className="App_content" style={{ display: 'flex' }}></div>*/}
       </section>
       <section className="App_section-3">
-        <div className="App_content" style={{ display: 'flex' }}>
-          <img className="application" src={slate} />
-          <div className="App_text">
-            <h2>Transactions</h2>
-            <span className="subheading">Every transaction is represented as a card.</span>
-            <p>
-              Wimble's core design is based on the idea that every transcation is a card.
-              As every transaction have their own respective transaction slate, it makes sense
-              to show it as a module inside the card rather than decoupling them.
-            </p>
-            <p>
-              Detailed information about a transaction can be seen by pressing the three dots.
-            </p>
-          </div>
+        <img className="application" src={slate} />
+        <div className="App_text">
+          <h2>Transactions</h2>
+          <span className="subheading">Every transaction is represented as a card.</span>
+          <p>
+            Wimble's core design is based on the idea that every transcation is a card.
+            As every transaction have their own respective transaction slate, it makes sense
+            to show it as a module inside the card rather than decoupling them.
+          </p>
+          <p>
+            Detailed information about a transaction can be seen by pressing the three dots.
+          </p>
         </div>
+        {/*<div className="App_content" style={{ display: 'flex' }}></div>*/}
       </section>
     </div>
   );
