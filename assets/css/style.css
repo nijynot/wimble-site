@@ -68,7 +68,7 @@ path {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	margin-top: 128px;
+	/* margin-top: 96px; */
 	width: 400px;
 }
 .App_section-1 {
